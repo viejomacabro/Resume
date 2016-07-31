@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jesus Osuna</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="./styles/indexStyle.css">
+</head>
+
+<body ng-app="myApp" ng-controller="resumeCtrl">
+
+<div class="mainCont">
+	<header>
+		<h1><img src="./img/shamrock.png" alt="Lucky!">Jesus Osuna</h1>
+		<p>jesus.eduardo.osuna@gmail.com</p>
+	</header>
+	
+	<section class="imgCont">
+	</section>
+
+	<section class="skillCont">
+		<div class="skill" ng-model="skills" ng-repeat="n in skills" ng-style="{background: colors[$index % colors.length]}" ng-click="invert(this)">
+			{{n.skill}}
+		</div>
+	</section>
+
+	<section class="summaryCont" ng-model="summary" ng-repeat="n in summary">
+		<div class="info">
+			<h2>{{n.title}}</h2>
+			<h3>{{n.school}}</h3>
+			<p class="jobAdd">{{n.period}}</p>
+		</div>
+
+		<div class="summary">
+			<q>{{n.quote}}</q>
+		</div>
+	</section>
+
+	<main>
+	<br><h2>Job Experience</h2>
+		<div class="jobCont" ng-repeat="n in jobs">
+
+			<div class="jobHeader">
+				<div class="jobPlace">
+					<h3>{{n.job}}</h3>
+					<span class="jobAdd">{{n.dept}}</span>
+				</div>
+
+				<div class="jobTitle">
+					<h4>{{n.title}}</h4>
+					<span class="jobAdd">{{n.period}}</span>
+				</div>
+			</div>
+
+			<div class="jobDescription">
+				<h4>Description:</h4>
+				<p class="jobAdd">{{n.descp1}}</p>
+				<p class="jobAdd">{{n.descp2}}</p>
+				<p class="jobAdd">{{n.descp3}}</p>
+				<p class="jobAdd">{{n.descp4}}</p>
+				<p class="jobAdd">{{n.descp5}}</p>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="linkBox" ng-repeat="n in links" ng-style="{'border-color': colors[$index % colors.length]}">
+			<a ng-href="{{n.url}}" ng-style="{'color': colors[$index % colors.length]}" target="_blank">{{n.title}}</a>
+		</div>
+	</footer>
+
+	<script src="resumeCtrl.js"></script>
+</div>
+</body>
+
+</html>

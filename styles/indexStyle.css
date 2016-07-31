@@ -1,0 +1,234 @@
+*{
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+	font-family: 'Oxygen', sans-serif;
+	color:#777777;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 900px;
+	min-width: 320px;
+}
+
+.mainCont{
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+}
+
+header, main{
+	width:100%;
+	text-overflow: ellipsis;
+
+}
+
+header{
+	text-align: right;
+	padding: 5px;
+}
+
+main{
+	background-color: #F2F2F2;
+	padding-bottom: 20px;
+}
+
+main h2{
+	padding:5px;
+}
+
+.invert{
+	filter: invert(100%);
+}
+
+.imgCont{
+	position: relative;
+	overflow-y: hidden;
+	width:100%;
+	height:320px;
+	background-image: url("../img/cel.png");	
+	background-repeat: no-repeat;	
+	background-position: center center;
+	/* background-attachment: fixed; */
+	background-size: cover;
+}
+
+
+.skillCont{
+	width: 100%;
+	display:flex;
+	flex-wrap: wrap;
+
+	overflow-y: hidden;
+}
+
+.skill{
+
+	font-size: small;
+	/* font-weight: bold; */
+	/* text-shadow: 1px 1px 0px rgba(0, 0, 0, 1); */
+	text-align: center;
+	width: 18%;
+	padding: 5px;
+	color: white;
+	flex-grow: 1;
+
+}
+
+.summaryCont{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 100%;
+	padding: 1.5em;
+
+}
+
+.summary{
+	padding: 20px;
+	font-style: italic;
+	text-align: center;
+	width: 75%;
+	min-width:180px;
+	flex-grow: 1;
+}
+
+.info{
+	min-width: 80px;
+	width: 25%;
+	flex-grow: 1;	
+}
+
+.jobCont{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+	padding: 5px;	
+}
+
+.jobHeader, .jobDescription{
+	background-color: #FFFFFF;
+	padding: 5px;
+}
+
+.jobDescription p{
+		margin-top: 10px;
+}
+
+p:empty {
+	display: none;
+}
+
+.jobHeader{
+	flex-grow: 1;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 5px;
+}
+
+.jobPlace{
+	width: 25%;
+	flex-grow: 1;
+}
+
+.jobAdd{
+	font-size: small;
+}
+
+.jobTitle{
+	margin-left:0; 
+	width: 75%;
+	flex-grow: 1;
+	text-align: right;
+}
+
+.jobDescription{
+	width: 100%;
+}
+
+.jobDescription h4{
+	column-span: all;
+}
+
+.desc{
+	width:100%;
+}
+
+footer{
+	display: flex;
+	flex-wrap: wrap;
+	text-align: right;
+	font-size: large;
+	margin-top: -10px;
+	width: 100%;
+	background-color: #1F2C30;
+}
+
+.linkBox{
+	text-align: center;
+	flex-grow: 1;
+	padding:20px;
+	vertical-align: middle;
+
+}
+
+.linkBox:hover{
+	padding-top: 15px;
+	border-top: 5px solid;
+}
+
+.linkBox a{
+	padding:1em;
+	margin:1em;
+	text-decoration: none;
+}
+
+
+
+@media screen and (min-width: 400px){
+	.imgCont{
+	background-image: url("../img/fullCel.png");
+	}
+}
+
+@media screen and (min-width: 500px){
+	.jobDescription{
+		text-overflow: ellipsis;
+		column-count: 2;
+	}
+}
+
+@media screen and (min-width: 700px){
+	.imgCont{
+	background-image: url("../img/lowBrowser.png");
+	height: 430px;
+	}
+}
+
+@media screen and (min-width: 900px){
+	.imgCont{
+	background-image: url("../img/fullBrowser.png");
+	height: 480px;
+	}
+
+	.jobAdd{
+		font-size: 90%;
+	}
+
+	.jobDescription{
+		text-overflow: ellipsis;
+		column-count: 4;
+		column-gap: 10px;
+	}
+
+}
+
+
+
+
