@@ -6,10 +6,10 @@ angular.module('myApp', []).controller('resumeCtrl', function($scope) {
         {skill:'JavaScript'},
         {skill:'jQuery'},
         {skill:'AngularJS'},
-        {skill:'jQuery'},
         {skill:'Responsive Web Design'},
         {skill:'Front-End'},
         {skill:'User Interface'},
+        {skill:'Dashboard'},
         {skill:'Digital Design'}
     ];
 
